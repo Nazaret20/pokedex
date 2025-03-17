@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+		<meta name="generator" content={Astro.generator} />
+		<title>Pokédex</title>
+	</head>
+	<body>
+		<header></header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer></footer>
+	</body>
+</html>
+
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		font-size: 62.5%;
+	}
+
+	body {
+		width: 100vw;
+		height: 100vh;
+		background-image: url('../../public/images/fondo-ancho.jpg');
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	header {
+		width: 100%;
+		height: 10rem;
+		border: 2px solid blue;
+	}
+
+	footer {
+		width: 100%;
+		height: 4rem;
+	}
+</style>
