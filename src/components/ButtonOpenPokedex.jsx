@@ -1,3 +1,5 @@
+import '../styles/buttonOpenPokedex.css'
+
 const ButtonOpenPokedex = ({ toggleOpen, isOpen }) => {
   return <button className="button" onClick={toggleOpen}></button>;
 };

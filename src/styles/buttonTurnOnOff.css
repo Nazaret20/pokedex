@@ -1,0 +1,20 @@
+.button-turn-on-off {
+  background-color: transparent;
+  border: none;
+  z-index: 3;
+  cursor: pointer;
+  position: absolute;
+  top: 1.2rem;
+  left: 11rem;
+}
+.top-screen.closed ~ .bottom-screen .img-pokeball {
+  visibility: hidden;
+}
+
+.img-pokeball {
+  width: 14rem;
+  z-index: 3;
+  visibility: unset;
+  display: block;
+  transition: 0.5s ease, visibility 0s 0.2s;
+}

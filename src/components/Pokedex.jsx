@@ -1,9 +1,10 @@
 import { useState } from "react";
 import ButtonOpenPokedex from "./ButtonOpenPokedex";
+import ButtonTurnOnOff from "./ButtonTurnOnOff";
 import "../styles/pokedex.css";
 
 const Pokedex = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -18,12 +19,14 @@ const Pokedex = () => {
           </div>
         </div>
 
+        <div className="center-console"></div>
+
         {/* Pantalla inferior */}
         <div className="bottom-screen">
+          <ButtonOpenPokedex toggleOpen={toggleOpen} isOpen={isOpen} />
           <div className="bottom-screen-inner">
-            <div className="bottom-screen-content">
-              <ButtonOpenPokedex toggleOpen={toggleOpen} isOpen={isOpen} />
-            </div>
+            <ButtonTurnOnOff />
+            <div className="bottom-screen-content"></div>
           </div>
         </div>
       </div>

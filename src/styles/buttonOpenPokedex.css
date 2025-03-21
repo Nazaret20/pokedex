@@ -1,0 +1,17 @@
+.button {
+  width: 4rem;
+  height: 0.8rem;
+  background-color: #c0b776;
+  position: absolute;
+  border: none;
+  bottom: -0.5rem;
+  left: 2rem;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #e1d78b;
+}
+.button:hover {
+  background-color: #e1d78b;
+}

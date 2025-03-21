@@ -14,24 +14,23 @@
 .console {
   position: relative;
   width: 100%;
-  height: 50rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid blue;
 }
 
 /* Estilos para la pantalla superior */
 .top-screen {
   width: 40rem;
   height: 21rem;
-  background-color: #aa1c1c;
+  background-color: #b83b3b;
   border-radius: 0.75rem;
-  margin-bottom: 0.25rem;
   transition: all 0.5s ease;
   transform-origin: bottom;
   z-index: 1;
+  position: relative;
 }
 
 .top-screen.open {
@@ -39,36 +38,48 @@
 }
 
 .top-screen.closed {
-  transform: rotateX(-110deg);
-  height: 20rem;
+  transform: rotateX(-180deg);
 }
 
+.top-screen.open .screen-inner {
+  opacity: 1;
+  visibility: visible;
+}
 /* Estilos para la pantalla interna */
 .screen-inner {
   width: 37rem;
   height: 16.4rem;
   margin: 2rem auto;
   border-radius: 0.5rem;
-  border: 1px solid;
+  border: 1px solid rgb(126, 126, 126);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.1s ease;
 }
 
 .screen-content {
   width: 100%;
   height: 100%;
-  background-color: #e2e8f0;
+  background: linear-gradient(to bottom, #414141, #949494);
   border-radius: 0.5rem;
 }
 
-.screen-text {
+/* .screen-text {
   font-size: 0.75rem;
   color: #4a5568;
+} */
+
+.center-console {
+  width: 80%;
+  height: 0.5rem;
+  background-color: #b13232;
 }
 
-/* Estilos para la pantalla inferior */
+/* Eantalla inferior */
 .bottom-screen {
   width: 40rem;
   height: 21rem;
-  background-color: #aa1c1c;
+  background-color: #b83b3b;
   border-radius: 0.75rem;
   margin-bottom: 0.25rem;
   transition: all 0.5s ease;
@@ -81,22 +92,14 @@
   height: 16.4rem;
   margin: 2rem auto;
   border-radius: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 1.5rem;
 }
 
 .bottom-screen-content {
   width: 100%;
   height: 100%;
-  background-color: #bf5151;
+  background-color: #b13232;
   border-radius: 0.5rem;
-}
-
-/* Estilos para el botón de abrir/cerrar */
-.button {
-  width: 4rem;
-  height: 0.8rem;
-  background-color: #c0b776;
-  position: absolute;
-  border: none;
-  bottom: -0.5rem;
-  cursor: pointer;
 }
