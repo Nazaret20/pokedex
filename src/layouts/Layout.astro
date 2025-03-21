@@ -5,10 +5,13 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
 		<meta name="generator" content={Astro.generator} />
+		<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 		<title>Pokédex</title>
 	</head>
 	<body>
-		<header></header>
+		<header>
+			<h1>Pokédex</h1>
+		</header>
 
 		<main>
 			<slot />
@@ -43,12 +46,26 @@
 
 	header {
 		width: 100%;
-		height: 10rem;
-		border: 2px solid blue;
+		height: 8rem;
+	}
+
+	@font-face {
+		font-family: 'Pokemon';
+		src: url('/fonts/pokemon.woff') format('woff'),
+		url('/fonts/pokemon.tff') format('ttf');
+	}
+
+	h1 {
+		font-size: 4rem;
+		font-family: "Pokemon", monospace;
+		/* font-family: "VT323", monospace; */
+		text-align: center;
+		margin-top: 2rem;
 	}
 
 	footer {
 		width: 100%;
 		height: 4rem;
+		
 	}
 </style>

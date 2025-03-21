@@ -1,105 +1,102 @@
 /* Estilos section */
-.container {
+/* .container {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    width: 160rem;
-	height: 80rem;
+    width: 120rem;
+	height: 80vh;
     border: 2px solid red;
 
-}
+} */
 
 /* Container pokedex */
 .console {
-	position: relative;
-	width: 140rem;
-	height: 70rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-    border: 2px solid red;
+  position: relative;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid blue;
 }
 
 /* Estilos para la pantalla superior */
 .top-screen {
-	width: 16rem; /* w-64 */
-	height: 10rem; /* h-40 */
-	background-color: #e53e3e; /* bg-red-600 */
-	border-radius: 0.75rem; /* rounded-lg */
-	margin-bottom: 0.25rem; /* mb-1 */
-	transition: all 0.5s ease;
-	transform-origin: bottom;
-    border: 2px solid red;
+  width: 40rem;
+  height: 21rem;
+  background-color: #aa1c1c;
+  border-radius: 0.75rem;
+  margin-bottom: 0.25rem;
+  transition: all 0.5s ease;
+  transform-origin: bottom;
+  z-index: 1;
 }
 
 .top-screen.open {
-	transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 
 .top-screen.closed {
-	transform: rotateX(-110deg);
+  transform: rotateX(-110deg);
+  height: 20rem;
 }
 
 /* Estilos para la pantalla interna */
 .screen-inner {
-	width: 14rem; /* w-56 */
-	height: 8rem; /* h-32 */
-	background-color: #2d3748; /* bg-gray-800 */
-	margin: 1rem; /* m-4 */
-	border-radius: 0.5rem; /* rounded */
+  width: 37rem;
+  height: 16.4rem;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
+  border: 1px solid;
 }
 
 .screen-content {
-	width: 100%;
-	height: 100%;
-	background-color: #e2e8f0; /* bg-gray-200 */
-	border-radius: 0.5rem; /* rounded */
-	padding: 0.5rem; /* p-2 */
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #e2e8f0;
+  border-radius: 0.5rem;
 }
 
 .screen-text {
-	font-size: 0.75rem; /* text-xs */
-	color: #4a5568; /* text-gray-600 */
+  font-size: 0.75rem;
+  color: #4a5568;
 }
 
 /* Estilos para la pantalla inferior */
 .bottom-screen {
-	width: 16rem; /* w-64 */
-	height: 10rem; /* h-40 */
-	background-color: #e53e3e; /* bg-red-600 */
-	border-radius: 0.75rem; /* rounded-lg */
+  width: 40rem;
+  height: 21rem;
+  background-color: #aa1c1c;
+  border-radius: 0.75rem;
+  margin-bottom: 0.25rem;
+  transition: all 0.5s ease;
+  transform-origin: bottom;
+  position: relative;
 }
 
-.bottom-screen .screen-inner {
-	width: 14rem; /* w-56 */
-	height: 8rem; /* h-32 */
-	background-color: #4a5568; /* bg-gray-800 */
-	margin: 1rem; /* m-4 */
-	border-radius: 0.5rem; /* rounded */
+.bottom-screen-inner {
+  width: 37rem;
+  height: 16.4rem;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
 }
 
-.bottom-screen .screen-content {
-	width: 100%;
-	height: 100%;
-	background-color: #e2e8f0; /* bg-gray-300 */
-	border-radius: 0.5rem; /* rounded */
-	padding: 0.5rem; /* p-2 */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.button {
-	width: 4rem; /* w-16 */
-	height: 4rem; /* h-16 */
-	background-color: #718096; /* bg-gray-500 */
-	border-radius: 50%; /* rounded-full */
+.bottom-screen-content {
+  width: 100%;
+  height: 100%;
+  background-color: #bf5151;
+  border-radius: 0.5rem;
 }
 
 /* Estilos para el botón de abrir/cerrar */
-/*                     */
+.button {
+  width: 4rem;
+  height: 0.8rem;
+  background-color: #c0b776;
+  position: absolute;
+  border: none;
+  bottom: -0.5rem;
+  cursor: pointer;
+}
