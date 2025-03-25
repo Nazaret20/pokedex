@@ -1,15 +1,3 @@
-/* Estilos section */
-/* .container {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    width: 120rem;
-	height: 80vh;
-    border: 2px solid red;
-
-} */
-
 /* Container pokedex */
 .console {
   position: relative;
@@ -19,19 +7,37 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2.5rem;
 }
 
 /* Estilos para la pantalla superior */
 .top-screen {
-  width: 40rem;
-  height: 21rem;
+  width: 45rem;
+  height: 30em;
   background-color: #b83b3b;
   border-radius: 0.75rem;
   transition: all 0.5s ease;
   transform-origin: bottom;
   z-index: 1;
   position: relative;
+  border: 3px solid #9b2f2f;
+
 }
+
+.logo-pokedex {
+  transform: rotate(180deg);
+  transform: scaleY(-1);
+  height: 18rem;
+  position: absolute;
+  top: 6rem;
+  left: 30%;
+  transition: opacity 0.5s ease, visibility 0.1s ease;
+}
+.logo-pokedex.open {
+  opacity: 0;
+  visibility: hidden;
+}
+
 
 .top-screen.open {
   transform: rotateX(0deg);
@@ -39,6 +45,10 @@
 
 .top-screen.closed {
   transform: rotateX(-180deg);
+  background-color: #40e3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .top-screen.open .screen-inner {
@@ -48,10 +58,10 @@
 /* Estilos para la pantalla interna */
 .screen-inner {
   width: 37rem;
-  height: 16.4rem;
+  height: 25rem;
   margin: 2rem auto;
   border-radius: 0.5rem;
-  border: 1px solid rgb(126, 126, 126);
+  border: 3.5px solid #9b2f2f;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.1s ease;
@@ -60,17 +70,17 @@
 .screen-content {
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.4em;
 }
 
 .screen-content.off {
-  background: linear-gradient(to bottom, #414141, #949494);
+  background: linear-gradient(#e8e8e8, #364149);
 }
 
 .screen-content.on {
-  background-color: #d1f9ff;
+  background-color: #c0e3e8;
   opacity: 1;
-  box-shadow: 0 0 15px 1px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.6);
   animation: flicker 1s ease-out forwards;
 }
 
@@ -102,28 +112,32 @@
 
 /* Eantalla inferior */
 .bottom-screen {
-  width: 40rem;
-  height: 21rem;
+  width: 45rem;
+  height: 30rem;
   background-color: #b83b3b;
   border-radius: 0.75rem;
   margin-bottom: 0.25rem;
   transition: all 0.5s ease;
   transform-origin: bottom;
   position: relative;
+  border: 3px solid #9b2f2f;
+
 }
 
 .bottom-screen-inner {
-  width: 37rem;
-  height: 17rem;
+  width: 42rem;
+  height: 25rem;
   margin: 2rem auto;
   border-radius: 0.5rem;
   position: absolute;
   left: 1.5rem;
+  top: 0.5rem;
 }
 
 .bottom-screen-content {
   width: 100%;
   height: 100%;
   background-color: #b13232;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
+  border: 1px solid #9b2f2f;
 }

@@ -4,8 +4,10 @@
   z-index: 3;
   cursor: pointer;
   position: absolute;
-  top: 1.5rem;
-  left: 11rem;
+  top: 5rem;
+  left: 13rem;
+  /* pointer-events: none; */
+  
 }
 .top-screen.closed ~ .bottom-screen .img-pokeball {
   visibility: hidden;

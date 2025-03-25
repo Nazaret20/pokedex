@@ -1,6 +1,5 @@
 import '../styles/buttonOpenPokedex.css';
 import { Howl } from "howler";
-import { useEffect } from "react";
 
 const ButtonOpenPokedex = ({ toggleOpen }) => {
   
@@ -15,7 +14,6 @@ const ButtonOpenPokedex = ({ toggleOpen }) => {
   }
 
   
-
   return <button className="button" onClick={handleClick}></button>;
 };
 

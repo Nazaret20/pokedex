@@ -1,6 +1,5 @@
 import "../styles/pokedex.css";
 import "../styles/buttonTurnOnOff.css";
-import { useEffect } from "react";
 import { Howl } from "howler";
 
 const ButtonTurnOnOff = ({ isOff, setIsOff }) => {
@@ -15,16 +14,14 @@ const ButtonTurnOnOff = ({ isOff, setIsOff }) => {
   });
 
   const handleClick = () => {
-    setIsOff(!isOff);
-  };
-
-  useEffect(() => {
-    if (!isOff) {
+    if (isOff) {
       soundOn.play();
     } else {
       soundOff.play();
     }
-  }, [isOff]);
+
+    setIsOff(!isOff);
+  };
 
   return (
     <button
