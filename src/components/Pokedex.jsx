@@ -5,6 +5,7 @@ import "../styles/pokedex.css";
 
 const Pokedex = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const [isOff, setIsOff] = useState(true);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -12,20 +13,20 @@ const Pokedex = () => {
   return (
     <section className="container">
       <div className="console">
-        {/* Pantalla superior */}
+        {/* ---------Pantalla superior-------- */}
         <div className={`top-screen ${isOpen ? "open" : "closed"}`}>
           <div className="screen-inner">
-            <div className="screen-content"></div>
+            <div className={`screen-content ${isOff ? "off" : "on"}`}></div>
           </div>
         </div>
 
         <div className="center-console"></div>
 
-        {/* Pantalla inferior */}
+        {/* ----------Pantalla inferior---------*/}
         <div className="bottom-screen">
           <ButtonOpenPokedex toggleOpen={toggleOpen} isOpen={isOpen} />
           <div className="bottom-screen-inner">
-            <ButtonTurnOnOff />
+            <ButtonTurnOnOff isOff={isOff} setIsOff={setIsOff}/>
             <div className="bottom-screen-content"></div>
           </div>
         </div>

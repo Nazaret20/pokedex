@@ -60,8 +60,33 @@
 .screen-content {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #414141, #949494);
   border-radius: 0.5rem;
+}
+
+.screen-content.off {
+  background: linear-gradient(to bottom, #414141, #949494);
+}
+
+.screen-content.on {
+  background-color: #d1f9ff;
+  opacity: 1;
+  box-shadow: 0 0 15px 1px rgba(255, 255, 255, 0.6);
+  animation: flicker 1s ease-out forwards;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* .screen-text {
@@ -89,11 +114,10 @@
 
 .bottom-screen-inner {
   width: 37rem;
-  height: 16.4rem;
+  height: 17rem;
   margin: 2rem auto;
   border-radius: 0.5rem;
   position: absolute;
-  top: 0.5rem;
   left: 1.5rem;
 }
 
