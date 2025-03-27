@@ -1,21 +1,24 @@
 .button-turn-on-off {
   background-color: transparent;
   border: none;
-  z-index: 3;
   cursor: pointer;
-  position: absolute;
-  top: 5rem;
-  left: 13rem;
+  height: 15rem;
+  margin-top: 0.5rem;
   /* pointer-events: none; */
-  
-}
-.top-screen.closed ~ .bottom-screen .img-pokeball {
-  visibility: hidden;
 }
 
 .img-pokeball {
-  width: 14rem;
+  width: 15rem;
+  height: 15rem;
   visibility: unset;
   display: block;
-  transition: 0.5s ease, visibility 0s 0.2s;
+}
+
+.button-turn-on-off.turn-on {
+  color: #51c5ff;
+  filter: drop-shadow(0 0 6px #aae3ff) brightness(1.1);
+}
+
+.button-turn-on-off.turn-off {
+  color: #9b2f2f;
 }

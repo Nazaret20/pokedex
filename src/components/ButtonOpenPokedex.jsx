@@ -1,19 +1,17 @@
-import '../styles/buttonOpenPokedex.css';
+import "../styles/buttonOpenPokedex.css";
 import { Howl } from "howler";
 
-const ButtonOpenPokedex = ({ toggleOpen }) => {
-  
-  const soundOpenClose = new Howl({
-    src: ["/soundsEffects/abrir-cerrar.mp3"],
-    volume: 1,
-  })
+const soundOpenClose = new Howl({
+  src: ["/soundsEffects/abrir-cerrar.mp3"],
+  volume: 1,
+});
 
+const ButtonOpenPokedex = ({ toggleOpen }) => {
   const handleClick = () => {
     soundOpenClose.play();
     toggleOpen();
-  }
+  };
 
-  
   return <button className="button" onClick={handleClick}></button>;
 };
 

@@ -32,8 +32,11 @@ const Pokedex = () => {
         <div className="bottom-screen">
           <ButtonOpenPokedex toggleOpen={toggleOpen} isOpen={isOpen} />
           <div className="bottom-screen-inner">
-            <ButtonTurnOnOff isOff={isOff} setIsOff={setIsOff} />
-            <ButtonNavigation />
+            <div className="pokedex-buttons">
+              <div className="zoom"></div>
+              <ButtonTurnOnOff isOff={isOff} setIsOff={setIsOff} />
+              <ButtonNavigation isOff={isOff} />
+            </div>
             <div className="bottom-screen-content"></div>
           </div>
         </div>
