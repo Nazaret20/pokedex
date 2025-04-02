@@ -6,7 +6,7 @@ import "../styles/pokedex.css";
 
 const Pokedex = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [isOff, setIsOff] = useState(true);
+  const [isOff, setIsOff] = useState(false);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
