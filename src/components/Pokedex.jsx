@@ -2,7 +2,9 @@ import { useState } from "react";
 import ButtonOpenPokedex from "./ButtonOpenPokedex";
 import ButtonTurnOnOff from "./ButtonTurnOnOff";
 import ButtonNavigation from "./ButtonNavigation";
+import PokemonData from "./DataPokemon";
 import "../styles/pokedex.css";
+import DataPokemon from "./DataPokemon";
 
 const Pokedex = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -22,7 +24,9 @@ const Pokedex = () => {
             alt="Logo de Pokédex"
           />
           <div className="screen-inner">
-            <div className={`screen-content ${isOff ? "off" : "on"}`}></div>
+            <div className={`screen-content ${isOff ? "off" : "on"}`}>
+              <DataPokemon />
+            </div>
           </div>
         </div>
 

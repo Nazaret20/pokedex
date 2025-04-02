@@ -3,13 +3,13 @@
   border: none;
   cursor: pointer;
   height: 15rem;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   /* pointer-events: none; */
 }
 
 .img-pokeball {
-  width: 15rem;
-  height: 15rem;
+  width: 18rem;
+  height: 18rem;
   visibility: unset;
   display: block;
 }

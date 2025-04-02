@@ -1,52 +1,58 @@
 .dpad {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  width: 12rem;
-  justify-content: flex-end;
-  position: relative;
-  padding-bottom: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+	width: 14rem;
+	justify-content: flex-end;
+	position: relative;
+	padding-bottom: 1.5rem;
 }
 
 .dpad-l-r {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
 }
 
 .dpad-button {
-  width: 3rem;
-  height: 3rem;
-  background: #9b2f2f;
-  color: #c9c9c9;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
+	width: 4rem;
+	height: 4rem;
+	background: #9b2f2f;
+	color: #c9c9c9;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
 }
 
-.dpad-button.active {
-  background-color: #005c66;
-  box-shadow: 0px 0px 15px #005c66;
+.dpad-button.backlight {
+	color: #6dceff;
+	text-shadow: 0px 0px 18px #aae3ff;
+	filter: drop-shadow(0 0 4px #aae3ffd7) brightness(1.1);
 }
 
 .dpad-button:hover {
-  text-shadow: 0px 0px 8px #00c8ff;
-  color: #00c7fe;
+	text-shadow: 0px 0px 8px #00c8ff;
+	color: #00c7fe;
 }
 
 .dpad-button:active {
-  background: #bcd9e3;
-  box-shadow: 0px 1px 5px rgba(0, 200, 255, 0.9);
+	background-color: #00334d38;
+	box-shadow: 0px 1px 5px #00c8ffe6;
 }
 
 .dpad-center {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
 }
+
+.dpad-button.disabled {
+	pointer-events: none;
+	cursor: not-allowed;
+}
+

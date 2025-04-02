@@ -12,15 +12,15 @@
 
 /* Estilos para la pantalla superior */
 .top-screen {
-  width: 45rem;
-  height: 30em;
-  background-color: #b83b3b;
+  width: 60rem;
+  height: 40em;
+  background-color: #e04a4a;
   border-radius: 0.75rem;
   transition: all 0.5s ease;
   transform-origin: bottom;
   z-index: 1;
   position: relative;
-  border: 3px solid #9b2f2f;
+  border: 3px solid #af3838;
 
 }
 
@@ -29,8 +29,8 @@
   transform: scaleY(-1);
   height: 18rem;
   position: absolute;
-  top: 6rem;
-  left: 30%;
+  top: 10rem;
+  left: 34%;
   transition: opacity 0.5s ease, visibility 0.1s ease;
 }
 .logo-pokedex.open {
@@ -57,11 +57,11 @@
 }
 /* Estilos para la pantalla interna */
 .screen-inner {
-  width: 37rem;
-  height: 25rem;
+  width: 56rem;
+  height: 35rem;
   margin: 2rem auto;
   border-radius: 0.5rem;
-  border: 3.5px solid #9b2f2f;
+  border: 3.5px solid #af3838;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.1s ease;
@@ -74,17 +74,18 @@
 }
 
 .screen-content.off {
-  background: linear-gradient(#e8e8e8, #18364bf1);
+  background: linear-gradient(160deg, #0d2333, #e8e8e8, #0d2333);
+  animation: flickerOff 1s ease-out forwards;
 }
 
 .screen-content.on {
-  background-color: #c0e3e8;
+  background-color: #caeff5;
   opacity: 1;
   box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.6);
-  animation: flicker 1s ease-out forwards;
+  animation: flickerOn 1s ease-out forwards;
 }
 
-@keyframes flicker {
+@keyframes flickerOn {
   0% {
     opacity: 0;
   }
@@ -99,6 +100,22 @@
   }
 }
 
+@keyframes flickerOff {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 /* .screen-text {
   font-size: 0.75rem;
   color: #4a5568;
@@ -107,30 +124,30 @@
 .center-console {
   width: 80%;
   height: 0.5rem;
-  background-color: #b13232;
+  background-color: #b93939;
 }
 
 /* Eantalla inferior */
 .bottom-screen {
-  width: 45rem;
-  height: 30rem;
-  background-color: #b83b3b;
+  width: 60rem;
+  height: 40rem;
+  background-color: #e04a4a;
   border-radius: 0.75rem;
   margin-bottom: 0.25rem;
   transition: all 0.5s ease;
   transform-origin: bottom;
   position: relative;
-  border: 3px solid #9b2f2f;
+  border: 3px solid #af3838;
 
 }
 
 .bottom-screen-inner {
-  width: 42rem;
-  height: 25rem;
+  width: 56rem;
+  height: 35rem;
   margin: 2rem auto;
   border-radius: 0.5rem;
   position: absolute;
-  left: 1.5rem;
+  left: 1.8rem;
   top: 0.5rem;
 }
 
@@ -139,18 +156,18 @@
   height: 100%;
   display: flex;
   position: absolute;
-  justify-content: space-between;
-  
+  justify-content: space-around;
+
 }
 
 .zoom {
-  width: 12rem;
+  width: 14rem;
 }
 
 .bottom-screen-content {
   width: 100%;
   height: 100%;
-  background-color: #b13232;
+  background-color: #c93535;
   border-radius: 0.7rem;
-  border: 1px solid #9b2f2f;
+  border: 1px solid #b93939;
 }

@@ -1,17 +1,17 @@
 .button {
-  width: 4rem;
-  height: 0.8rem;
-  background-color: #c0b776;
+  width: 6rem;
+  height: 1rem;
+  background-color: #ebe091;
   position: absolute;
   border: none;
-  bottom: -0.5rem;
+  bottom: -0.7rem;
   left: 2rem;
   cursor: pointer;
 }
 
 .button:active {
-  background-color: #e1d78b;
+  background-color: #c9bf75;
 }
 .button:hover {
-  background-color: #e1d78b;
+  background-color: #c9bf75;
 }
